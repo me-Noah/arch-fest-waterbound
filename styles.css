@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: 'Century Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Fixed Header */
+header {
+    display: flex;
+    justify-content: center; /* Centers all elements */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+/* New Flexbox Wrapper for Menu + Title */
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Adjust menu container */
+.menu-container {
+    position: absolute;
+    left: 20px;
+}
+
+/* Ensures proper centering of title */
+header h1 {
+    margin: 0 auto; /* Centers the title */
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+
+/* Ensure content doesn't go under fixed header */
+body {
+    padding-top: 60px;
+}
+
+
+/* Menu Button */
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #003366;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hero Section */
+#hero {
+    background-color: orange;
+    padding: 50px 20px;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 32px;
+}
+
+#hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Gallery */
+#gallery {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+}
+
+.slide {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    display: none;
+    border-radius: 10px; /* Rounded edges */
+}
+
+.active {
+    display: block;
+}
+
+/* Event Schedule, Register, and Contact Sections */
+#schedule, #rsvp, #contact {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Register Button */
+.rsvp-button {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.rsvp-button:hover {
+    background-color: #001f4d;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu {
+        top: 50px;
+        left: 10px;
+    }
+
+    .menu-btn {
+        font-size: 20px;
+    }
+
+    #hero h2 {
+        font-size: 24px;
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+}
