@@ -58,8 +58,8 @@ header h1 {
     text-align: center;
     flex-grow: 1;
 	color:  #aed6f1;
-    text-shadow: 0 0 2px #00f7ff, 0 0 10px #00f7ff, 0 0 15px #0077b6;
-    animation: pulse 2s infinite alternate;
+    text-shadow: 0 0 0.5px #00f7ff, 0 0 4px #00f7ff, 0 0 4px #0077b6;
+   
 }
 
 /* Ensure content doesn't go under fixed header */
