@@ -1,12 +1,17 @@
 /* Import Bootstrap */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
 
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import Local Font */
+@font-face {
+    font-family: 'Avenir Roman';
+    src: url('avenir-roman.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
 
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Avenir Roman", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -46,11 +51,15 @@ header {
 
 /* Title Centered */
 header h1 {
-    font-size: 30px;
+	font-family: "Avenir Roman", sans-serif;
+    font-size: 40px;
     font-weight: bold;
     margin: 0 auto;
     text-align: center;
     flex-grow: 1;
+	color:  #aed6f1;
+    text-shadow: 0 0 2px #00f7ff, 0 0 10px #00f7ff, 0 0 15px #0077b6;
+    animation: pulse 2s infinite alternate;
 }
 
 /* Ensure content doesn't go under fixed header */
@@ -101,8 +110,10 @@ body {
 }
 
 .menu li a:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0 !important;
+    color: #003366 !important;
 }
+
 
 /* Hero Section */
 #hero {
@@ -192,6 +203,12 @@ footer {
     color: white;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+.mylink {
+    color: inherit;  /* Uses the same text color as surrounding text */
+    text-decoration: none;  /* Removes underline */
+    cursor: default;  /* Prevents showing a pointer cursor */
 }
 
 /* Responsive Design */
