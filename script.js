@@ -2,17 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-btn");
     const menu = document.querySelector(".menu");
     const menuLinks = document.querySelectorAll(".menu a");
-    const headerHeight = document.querySelector("header").offsetHeight; // Get header height
+    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+    const scrollToTopButton = document.getElementById("scrollToTop");
+
+    // Hide initially
+    scrollToTopButton.style.display = "none";
 
     // Toggle menu on button click
-    menuButton.addEventListener("click", function () {
-        menu.classList.toggle("show-menu");
+    menuButton?.addEventListener("click", function () {
+        menu?.classList.toggle("show-menu");
     });
 
     // Hide menu when clicking outside
     document.addEventListener("click", function (event) {
         if (!event.target.closest(".menu-container") && !event.target.closest(".menu-btn")) {
-            menu.classList.remove("show-menu");
+            menu?.classList.remove("show-menu");
         }
     });
 
@@ -21,27 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function (event) {
             event.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
-            
+
             if (targetId === "about") {
-                // If "About" is clicked, scroll to the very top
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+                window.scrollTo({ top: 0, behavior: "smooth" });
             } else {
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     const offsetPosition = targetSection.offsetTop - headerHeight - 10;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
+                    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
                 }
             }
 
-            // Hide menu after clicking a link
-            menu.classList.remove("show-menu");
+            menu?.classList.remove("show-menu");
         });
     });
 
@@ -49,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".slide");
     let currentIndex = 0;
     let slideshowInterval;
+    const slideshowContainer = document.querySelector(".slideshow-container");
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
@@ -57,25 +53,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startSlideshow() {
-        if (slides.length === 0) return; // Prevent errors if no slides exist
-        
+        if (slides.length === 0) return;
         showSlide(currentIndex);
         slideshowInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             showSlide(currentIndex);
-        }, 1000); // Changed from 1000ms (1 sec) to 3000ms (3 sec) for better viewing
+        }, 3000);
     }
 
-    // Pause slideshow on hover
-    document.querySelector(".slideshow-container")?.addEventListener("mouseenter", function () {
-        clearInterval(slideshowInterval);
+    slideshowContainer?.addEventListener("mouseenter", () => clearInterval(slideshowInterval));
+    slideshowContainer?.addEventListener("mouseleave", startSlideshow);
+
+    if (slides.length > 0) startSlideshow();
+
+    // Scroll to Top Button Logic
+    window.addEventListener("scroll", function () {
+        const scrollHeight = window.innerHeight + window.scrollY;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollHeight >= documentHeight - 20) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
     });
 
-    document.querySelector(".slideshow-container")?.addEventListener("mouseleave", function () {
-        startSlideshow();
+    scrollToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
-
-    if (slides.length > 0) {
-        startSlideshow();
-    }
 });
