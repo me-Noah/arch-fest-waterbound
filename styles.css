@@ -140,7 +140,7 @@ footer.text-center {
 /* Scroll to Top Button */
 #scrollToTop {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
     width: 50px; /* slightly bigger for better touch targets, optional */
     height: 50px;
