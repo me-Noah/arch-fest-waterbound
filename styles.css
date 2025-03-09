@@ -51,14 +51,15 @@ header {
 
 /* Title Centered */
 header h1 {
-	font-family: "Avenir Roman", sans-serif;
+    font-family: 'Avenir Book', AvenirLTStd-Book;
+    src: url('AvenirLTStd-Book.otf') format('truetype');	
     font-size: 40px;
     font-weight: bold;
     margin: 0 auto;
     text-align: center;
     flex-grow: 1;
 	color:  #aed6f1;
-    text-shadow: 0 0 2px #00f7ff, 0 0 10px #00f7ff, 0 0 15px #0077b6;
+    text-shadow: 0 0 1px #00f7ff, 0 0 5px #00f7ff, 0 0 10px #0077b6;
     animation: pulse 2s infinite alternate;
 }
 

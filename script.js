@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slideshowInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             showSlide(currentIndex);
-        }, 3000);
+        }, 1500);
     }
 
     slideshowContainer?.addEventListener("mouseenter", () => clearInterval(slideshowInterval));
