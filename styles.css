@@ -142,8 +142,8 @@ footer.text-center {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    width: 50px; /* slightly bigger for better touch targets, optional */
+    height: 50px;
     background-color: #0033FF;
     color: #fff;
     border: none;
@@ -159,9 +159,10 @@ footer.text-center {
 }
 
 #scrollToTop:hover {
-    background-color: #0022CC;
-    transform: translateY(-5px) scale(1.1);
+    background-color: #0022cc;
+    transform: scale(1.1);
 }
+
 
 #scrollToTop:focus {
     outline: none;
