@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WaterBound</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Optional JS -->
     <script defer src="script.js"></script>
 </head>
 <body>
 
     <!-- Navigation Header -->
     <header class="fixed-top p-3 shadow">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="m-0 text-uppercase text-center flex-grow-1">WaterBound</h1>
-        </div>
-    </header>
+		<div class="container d-flex justify-content-center align-items-center">
+			<h1 class="m-0 text-uppercase text-center flex-grow-1">WaterBound</h1>
+		</div>
+	</header>
 
     <!-- Hero Section -->
     <section id="top">
@@ -28,16 +37,17 @@
     <section id="gallery">
         <div class="container text-center">
             <div class="slideshow-container">
-                <img class="slide img-fluid" src="img1.jpg" alt="Artwork 1">
-                <img class="slide img-fluid" src="img2.jpg" alt="Artwork 2">
-                <img class="slide img-fluid" src="img3.jpg" alt="Artwork 3">
-                <img class="slide img-fluid" src="img4.jpg" alt="Artwork 4">
-                <img class="slide img-fluid" src="img5.jpg" alt="Artwork 5">
-                <img class="slide img-fluid" src="img6.jpg" alt="Artwork 6">
-                <img class="slide img-fluid" src="img7.jpg" alt="Artwork 7">
-                <img class="slide img-fluid" src="img8.jpg" alt="Artwork 8">
-                <img class="slide img-fluid" src="img9.jpg" alt="Artwork 9">
-                <img class="slide img-fluid" src="img10.jpg" alt="Artwork 10">
+                <img class="slide img-fluid" src="img1.jpg" alt="Artwork 1" />
+                <img class="slide img-fluid" src="img2.jpg" alt="Artwork 2" />
+                <img class="slide img-fluid" src="img3.jpg" alt="Artwork 3" />
+				<img class="slide img-fluid" src="img4.jpg" alt="Artwork 4" />
+				<img class="slide img-fluid" src="img5.jpg" alt="Artwork 5" />
+				<img class="slide img-fluid" src="img6.jpg" alt="Artwork 6" />
+				<img class="slide img-fluid" src="img7.jpg" alt="Artwork 7" />
+				<img class="slide img-fluid" src="img8.jpg" alt="Artwork 8" />
+				<img class="slide img-fluid" src="img9.jpg" alt="Artwork 9" />
+				<img class="slide img-fluid" src="img10.jpg" alt="Artwork 10" />
+                <!-- Add more images as needed -->
             </div>
         </div>
     </section>
@@ -59,21 +69,29 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container text-center">
-            <p>Email: yn93@njit.edu</p>
-        </div>
-    </section>
-
     <!-- Scroll To Top Button -->
-    <button id="scrollToTop">^</button>
+    <button id="scrollToTop" aria-label="Scroll to top">^</button>
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <p>
-            <a href="https://www.instagram.com/reel/DBzAYJHodTQZWYM2S9s3e9BzyFOtiTK6EDNjyg0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="mylink">&copy;</a> 2025 WaterBound. All rights reserved.
-        </p>
+    <!-- Footer Section -->
+    <footer class="custom-footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a community of designers, thinkers, and advocates brought together by a shared love for the Passaic River ; as students of NJIT’s Master’s in Urban Design studio, we are not just studying cities, we are actively engaging with the landscapes that shape them. Our work extends beyond the classroom, driven by a commitment to understanding, reimagining, and caring for the environments we inhabit.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Goal</h3>
+                <p>This exhibit is part of our ongoing exploration of the Passaic River—its history, its present challenges, and its future possibilities. Through design, research, and artistic expression, we aim to foster awareness and care for the river. We invite you to experience the river through a new lens, to reflect on the marks we leave behind, and to join us in shaping a more thoughtful relationship with the natural world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:yn93@njit.edu">yn93@njit.edu</a></p>
+				<p>Follow us: <a href="https://www.instagram.com/njitwaterbound?igsh=dHp2M3I1bnNja2Uw"target="_blank">Instagram</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p><a href="https://www.instagram.com/reel/DBzAYJHodTQZWYM2S9s3e9BzyFOtiTK6EDNjyg0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="mylink">&copy;</a> 2025 WaterBound. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
