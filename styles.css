@@ -19,11 +19,12 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(135, 206, 235, 0.95);
+    background-color: rgba(135, 206, 235, 0.6); /* Increased transparency */
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px); /* Optional: adds glassy effect */
 }
 
 header h1 {
@@ -31,9 +32,10 @@ header h1 {
     font-size: clamp(2rem, 5vw, 4rem);
     color: #0033FF;
     letter-spacing: 2px;
-    margin: 0; /* Remove default margin */
+    margin: 0;
     text-align: center;
 }
+
 /* Hero Section */
 #top {
     padding: 100px 20px 30px;
@@ -72,10 +74,11 @@ header h1 {
 #schedule, #rsvp, #contact {
     text-align: center;
     padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3); /* Increased transparency */
     border-radius: 12px;
     margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px); /* Optional: subtle blur for better readability */
 }
 
 #schedule:hover, #rsvp:hover, #contact:hover {
@@ -106,53 +109,57 @@ header h1 {
 }
 
 /* Scroll To Top */
+/* Scroll To Top - Updated */
 #scrollToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #0033FF;
+    background-color: rgba(0, 51, 255, 0.8); /* Semi-transparent, but not too much */
     color: #fff;
     border-radius: 50%;
     font-size: 24px;
-    border: none;
+    border: 2px solid #fff; /* Add a border for clear edges */
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Less blur, tighter shadow */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999; /* Ensure it's on top */
 }
 
 #scrollToTop:hover {
-    background-color: #0022CC;
+    background-color: rgba(0, 34, 204, 0.9);
     transform: scale(1.1);
 }
 
+
 /* Footer */
 .custom-footer {
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.3); /* Increased transparency */
     color: #333;
     padding: 60px 20px 30px;
     margin-top: 40px;
     border-top: 1px solid #ddd;
+    backdrop-filter: blur(5px); /* Optional */
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center items horizontally */
+    justify-content: center;
     align-items: flex-start;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center; /* Center-align all text */
+    text-align: center;
 }
 
 .footer-section {
     flex: 1 1 300px;
-    min-width: 280px; /* Ensures sections don't get too small */
+    min-width: 280px;
 }
 
 .footer-section h3 {
@@ -199,6 +206,6 @@ header h1 {
     }
 
     header h1 {
-        font-size: clamp(2rem, 8vw, 3rem); /* Adjust heading for mobile */
+        font-size: clamp(2rem, 8vw, 3rem);
     }
 }
